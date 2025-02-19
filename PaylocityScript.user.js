@@ -231,7 +231,7 @@ function buildTable() {
 		}
 
 		// Add up all days available (except sick days)
-		if (!cells[columnMap.type.index].querySelector('a')?.textContent.toLowerCase().indexOf('sick')) {
+		if (cells[columnMap.type.index].querySelector('a')?.textContent.toLowerCase().indexOf('sick') === -1) {
 			totalDaysAvailable += cellMap.available.days
 		}
 
